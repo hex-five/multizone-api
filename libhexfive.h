@@ -12,6 +12,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
+/* Copyright(C) 2018 Hex Five Security, Inc. - All Rights Reserved */
 
 #include <unistd.h>
 
@@ -19,11 +20,18 @@
 #define LIBHEXFIVE_H_
 
 void ECALL_YIELD();
+void ECALL_WFI();
+
 void ECALL_SEND(int, void *);
 void ECALL_RECV(int, void *);
 
 void ECALL_TRP_VECT(int, void *);
 void ECALL_IRQ_VECT(int, void *);
+
+void ECALL_CSRS_MIE();
+void ECALL_CSRC_MIE();
+
+void ECALL_CSRW_MTIMECMP(uint64_t);
 
 uint64_t ECALL_CSRR_MTIME();
 uint64_t ECALL_CSRR_MCYCLE();
