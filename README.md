@@ -1,5 +1,5 @@
 # multizone-api
-# Copyright(C) 2018 Hex Five Security, Inc. - All Rights Reserved
+# Copyright(C) 2018 Hex Five Security, Inc.
 MultiZone Security API v0.1.1
 
 The design point of the MultiZone nanoKernel is to be minimalist - additional services can be built into Zones as needed.
