@@ -2,7 +2,7 @@
 # Copyright(C) 2019 Hex Five Security, Inc.
 Multi Zone API v1.1.1
 
-The design point of the MultiZone nanoKernel is to be minimalist - additional services can be built into Zones as needed.
+The design point of the Multi Zone TEE is to be minimalist - additional services can be built into Zones as needed.
 
 Whats new in V1.1.0
 * ECALL_SEND now provides backpressure.  
