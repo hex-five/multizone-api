@@ -8,6 +8,7 @@ The MultiZone™ Security implementation provided by Hex Five includes MultiZone
 
 For more information see http://hex-five.com/faq
 
+<br>
 
 |Function |	Syntax and Function |	Example |
 |---------|---------------------|---------|
