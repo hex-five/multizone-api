@@ -82,25 +82,25 @@
   asm volatile ("li a1, %1; li a0, 7; ecall; mv %0, a0" : "=r"(rd) : "I"(csr) : "a0", "a1"); \
   rd; })
 
-#define CSR_MSTATUS			 0
-#define CSR_MIE              1
-#define CSR_MTVEC            2
-#define CSR_MSCRATCH         3
-#define CSR_MEPC             4
-#define CSR_MCAUSE			 5
-#define CSR_MTVAL			 6
-#define CSR_MIP				 7
+#define CSR_MSTATUS       0
+#define CSR_MIE           1
+#define CSR_MTVEC         2
+#define CSR_MSCRATCH      3
+#define CSR_MEPC          4
+#define CSR_MCAUSE        5
+#define CSR_MTVAL         6
+#define CSR_MIP           7
 
-#define CSR_MISA			 8
-#define CSR_MVENDORID		 9
-#define CSR_MARCHID			10
-#define CSR_MIMPID			11
-#define CSR_MHARTID 	 	12
+#define CSR_MISA          8
+#define CSR_MVENDORID     9
+#define CSR_MARCHID      10
+#define CSR_MIMPID       11
+#define CSR_MHARTID      12
 
-#define CSR_MCYCLE 		 	13
-#define CSR_MINSTRET 	 	14
-#define CSR_MHPMCOUNTER3 	15
-#define CSR_MHPMCOUNTER4 	16
+#define CSR_MCYCLE       13
+#define CSR_MINSTRET     14
+#define CSR_MHPMCOUNTER3 15
+#define CSR_MHPMCOUNTER4 16
 
 #if __riscv_xlen==32
 	#define CSR_MCYCLEH 	  	17
@@ -111,11 +111,12 @@
 
 #define CSR_MHPMCOUNTER21 	21 // kernel count
 #define CSR_MHPMCOUNTER22 	22 // kernel cycle min
-#define CSR_MHPMCOUNTER23 	23 // kernel cycle tot
-#define CSR_MHPMCOUNTER24 	24 // kernel cycle max
-#define CSR_MHPMCOUNTER25 	25 // kernel instret min
-#define CSR_MHPMCOUNTER26 	26 // kernel instret tot
-#define CSR_MHPMCOUNTER27 	27 // kernel instret max
+#define CSR_MHPMCOUNTER23 	23 // kernel cycle sum
+//                              24    reserved
+#define CSR_MHPMCOUNTER24 	25 // kernel cycle max
+#define CSR_MHPMCOUNTER25 	26 // kernel instret min
+#define CSR_MHPMCOUNTER26 	27 // kernel instret sum
+#define CSR_MHPMCOUNTER27 	28 // kernel instret max
 
 // ----- Privileged Pseudoinstructions  ------
 
@@ -153,3 +154,4 @@
 
 
 #endif /* MULTIZONE_H */
+
